@@ -7,3 +7,4 @@ backend/assets/
 backend/contracts/web3dp-show.sol
 scripts/mint-nft.mjs
 scripts/store-assets.mjs
+dist.zip
