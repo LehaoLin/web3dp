@@ -56,5 +56,4 @@ yarn build
 
 ## License
 
-Check the license [here](https://github.com/LehaoLin/web3dp
-/blob/main/LICENSE).
+Check the license [here](https://github.com/LehaoLin/web3dp/blob/main/LICENSE).
