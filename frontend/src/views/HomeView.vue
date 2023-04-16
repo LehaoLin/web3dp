@@ -554,6 +554,7 @@ export default {
       });
     },
     async search() {
+      console.log(this.search_select, this.search_input);
       if (this.search_input == "") {
         this.searching_data = true;
         await this.get_data();
@@ -561,7 +562,7 @@ export default {
         return;
       }
 
-      if (this.search_select.value == "1") {
+      if (this.search_select == "1") {
         // tokenID
         if (!isNaN(this.search_input)) {
           var max_num = await this.contract.methods.totalSupply().call();
@@ -594,6 +595,16 @@ export default {
             type: "warning",
           });
         }
+      } else if (this.search_select == "2") {
+        // labels
+        // to save network resource, only support filtering the local data
+        let label = this.search_input;
+        console.log(this.tableData);
+        this.tableData = this.tableData.filter((item) => {
+          if (item.labels.includes(label)) {
+            return item;
+          }
+        });
       }
     },
     async get_more_data() {
